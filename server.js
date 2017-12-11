@@ -11,7 +11,7 @@ var api = require(path.join(__dirname, "./app/routing/apiRouts.js"));
 var app = express();
 
 // Designate port for server to listen on
-var PORT = 3001;
+var PORT = process.env.PORT || 3001;
 
 // Set up bodyparser middleware
 app.use(bodyParser.json());
