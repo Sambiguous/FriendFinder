@@ -7,6 +7,9 @@
 
     <title>ff survey</title>
 
+    <!-- link JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -20,28 +23,247 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Link custom CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
+<body>
+
+
 <div class="container">
     <div class="jumbotron">
-        <h1><i class="fa fa-facebook-square"></i> Combatibility Survey</h1>
+        <h1><i class="fa fa-facebook-square"></i> Compatibility Survey</h1>
         <hr>
-        <h2>Answer the questions as honestly as you can.</h2>
-        <h2>We'll find you a friend who shares your values.</h2>
+        <h3>Answer each question on a scale of 1 to 5</h3>
+        <h3>1 if you strongly disagree, 5 if you strongly agree</h3>
+        <h3>Answer honesty and we'll find you a friend who shares the same values</h3>
+
         <br>
+
         <a href="/">
             <button type="button" class="btn btn-lg btn-danger"><h4><sapn class="glyphicon glyphicon-arrow-left"></sapn> Back to Homepage</h4></button> 
         </a>
     </div>
 
-    <!-- <span> -->
-        <!-- <a href="http://localhost:8080/api/tablelist">API Table Link</a> -->
-        <!-- <a href="#">API Friends List</a> -->
-        <!-- | -->
-        <!-- <a href="http://localhost:8080/api/waitlist">API wait list</a> -->
-        <!-- <a href="#">GitHub Repo</a> -->
-    <!-- </span> -->
+<!-- name and photo input -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name (required):</label>
+            <input type="text" autocomplete="off" placeholder="Enter name here" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="photo">Link to photo image (required):</label>
+            <input type="text" autocomplete="off" placeholder="Link photo here" class="form-control" id="photo">
+        </div>
+    </form>
+
+<!-- Survey Questions -->
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="question_number">
+                    <p>1.</p>
+                </td>
+                <td class="question">
+                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                </td>
+                <td>
+                    <div id="q1" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>2.</p>
+                </td>
+                <td class="question">
+                    <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                </td>
+                <td>
+                    <div id="q2" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>3.</p>
+                </td>
+                <td class="question">
+                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                </td>
+                <td>
+                    <div id="q3" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>4.</p>
+                </td>
+                <td class="question">
+                    <p>You rarely do something just out of sheer curiosity.</p>
+                </td>
+                <td>
+                    <div id="q4" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>5.</p>
+                </td>
+                <td class="question">
+                    <p>People can rarely upset you.</p>
+                </td>
+                <td>
+                    <div id="q5" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>6.</p>
+                </td>
+                <td class="question">
+                    <p>It is often difficult for you to relate to other people’s feelings.</p>
+                </td>
+                <td>
+                    <div id="q6" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>7.</p>
+                </td>
+                <td class="question">
+                    <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                </td>
+                <td>
+                    <div id="q7" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>8.</p>
+                </td>
+                <td class="question">
+                    <p>You rarely get carried away by fantasies and ideas.</p>
+                </td>
+                <td>
+                    <div id="q8" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>9.</p>
+                </td>
+                <td class="question">
+                    <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+                </td>
+                <td>
+                    <div id="q9" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="question_number">
+                    <p>10.</p>
+                </td>
+                <td class="question">
+                    <p>You feel more energetic after spending time with a group of people.</p>
+                </td>
+                <td>
+                    <div id="q10" class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default answer">1</button>
+                        <button type="button" class="btn btn-default answer">2</button>
+                        <button type="button" class="btn btn-default answer">3</button>
+                        <button type="button" class="btn btn-default answer">4</button>
+                        <button type="button" class="btn btn-default answer">5</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <button id="submit" type="button" class="btn btn-danger">Submit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!-- end container -->
+
+<!-- Friend match popup -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="new_best_friend"></h4>
+            </div>
+            <div class="modal-body">
+                <img id="friend_img" src="#" alt="Picture of your new friend"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
-    
+
+<!-- Links -->
+<span>
+    <a href="/api/friends">API Friends List</a>
+    | 
+    <a href="#">GitHub Repo</a>
+</span>  
+<script src="js/app.js"></script>
+ 
 </body>
 </html>
