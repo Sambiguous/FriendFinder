@@ -32,6 +32,10 @@ body{
     width: 165px;
 }
 
+#friend_img{
+    width: 100%;
+}
+
 #new_best_friend{
     color: #222;
 }
